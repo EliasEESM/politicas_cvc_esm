@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Políticas y Objetivos Organizacionales CVC de Occidente 2026</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Barra Superior Institucional -->
+    <header class="topbar">
+      <div class="brand-cluster" data-route="home" role="button" tabindex="0" aria-label="Ir al inicio">
+        <img src="img/logo.png" alt="Logo CVC de Occidente" class="brand-logo-img" />
+  
+        <div class="brand-titles">
+          <span class="brand-name">Centro de Calibraciones y Validaciones de Occidente, S.A. de C.V.</span>
+          <span class="brand-sub">Políticas y Objetivos del Sistema de Gestión de Calidad • NMX-EC-17025-IMNC-2018 / ISO/IEC 17025:2017</span>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button type="button" class="btn-ios btn-ios-secondary btn-ios-sm" data-route="exposicion">
+          Exposición
+        </button>
+        <button type="button" class="btn-ios btn-ios-primary btn-ios-sm" data-route="dinamica">
+          Dinámica
+        </button>
+      </div>
+    </header>
+
+    <main class="view-container">
+      <!-- ====================================================================
+           PANTALLA DE INICIO
+           ==================================================================== -->
+      <section id="view-home" class="spa-view active">
+        <div class="home-hero-wrapper">
+          <div class="home-hero-card">
+            <span class="ios-pill-badge">
+              Revisión Anual • Edición 2026
+            </span>
+            <h1 class="hero-title">
+              Políticas y Objetivos Organizacionales CVC de Occidente 2026
+            </h1>
+            <p class="hero-subtitle">
+              Exposición de la Política de Calidad, Objetivos Organizacionales y Políticas Complementarias
+            </p>
+
+            <div class="hero-metrics-row">
+              <div class="hero-metric-box">
+                <p class="hero-metric-text">
+                  Actualmente contamos con 1 Política de Calidad, 7 Objetivos Organizacionales y 14 Políticas Complementarias.
+                </p>
+              </div>
+              <div class="hero-metric-box">
+                <p class="hero-metric-text">
+                  Como evaluación realizaremos una dinámica de 16 escenarios hipotéticos para responder conforme a las políticas establecidas.
+                </p>
+              </div>
+            </div>
+
+            <div class="home-cta-group">
+              <button type="button" class="btn-ios btn-ios-primary" data-route="exposicion">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span>Exposición</span>
+              </button>
+              <button type="button" class="btn-ios btn-ios-secondary" data-route="dinamica">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span>Dinámica</span>
+              </button>
+            </div>
+
+            <div class="home-credit-footer">
+              Desarrollado en CVC de Occidente por Elías Sánchez
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           VISTA 1: EXPOSICIÓN (MASONRY + FLASHCARDS FLIP)
+           ==================================================================== -->
+      <section id="view-exposicion" class="spa-view">
+        <div class="section-header">
+          <div>
+            <span class="ios-pill-badge">Exposición</span>
+            <h2 style="font-size: 1.75rem; font-weight: 800; margin-top: 0.45rem;">
+              Políticas y Objetivos Organizacionales 2026
+            </h2>
+            <p class="text-muted" style="font-size: 0.92rem;">
+              Haz clic en cualquier tarjeta para girarla y consultar los fragmentos oficiales.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="exposicion-controls">
+          <div class="segmented-control" role="tablist" aria-label="Filtrar por clasificación">
+            <button type="button" class="segment-btn active" data-filter-cat="todas">
+              Todas
+            </button>
+            <button type="button" class="segment-btn" data-filter-cat="calidad">
+              Política de Calidad
+            </button>
+            <button type="button" class="segment-btn" data-filter-cat="objetivos">
+              Objetivos Organizacionales
+            </button>
+            <button type="button" class="segment-btn" data-filter-cat="complementarias">
+              Políticas Complementarias
+            </button>
+          </div>
+
+          <div class="search-box-ios">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="exposicion-search" placeholder="Buscar política u objetivo..." />
+          </div>
+        </div>
+
+        <div id="exposicion-masonry" class="masonry-grid"></div>
+      </section>
+
+      <!-- ====================================================================
+           VISTA 2: DINÁMICA (EL JUEGO DE 16 ESCENARIOS)
+           ==================================================================== -->
+      <section id="view-dinamica" class="spa-view">
+        <div id="dinamica-stage-root"></div>
+      </section>
+    </main>
+
+    <!-- Menú Flotante Discreto en la Esquina Inferior Derecha -->
+    <nav class="floating-nav-dock" aria-label="Menú de navegación rápida">
+      <button type="button" class="dock-btn active" data-route="home" title="Pantalla de Inicio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Inicio</span>
+      </button>
+      <button type="button" class="dock-btn" data-route="exposicion" title="Vista 1: Exposición de Políticas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>Exposición</span>
+      </button>
+      <button type="button" class="dock-btn" data-route="dinamica" title="Vista 2: Dinámica">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span>Dinámica</span>
+      </button>
+      <div class="dock-divider"></div>
+      <button type="button" class="dock-btn dock-icon-only js-toggle-sound" title="Silenciar / Activar sonido">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Overlay de Flashcard Ampliada fijo al viewport visible (Escritorio y Celular) -->
+  <div id="flashcard-expanded-overlay" class="flashcard-expanded-overlay" aria-hidden="true"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
